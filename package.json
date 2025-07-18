@@ -1,11 +1,14 @@
 {
-  "name": "evpl_vite_template",
+  "name": "STP-9408",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.18.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/evpl_vite_template/",
+    "build": "vite build --base=/STP-9408/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview"
   },
@@ -16,9 +19,11 @@
     "vite": "^5.4.6",
     "vite-plugin-image-optimizer": "^1.1.8"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Dmytro Salyakin <d.salyaki@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.4.1",
+    "swiper": "^11.2.10",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
