@@ -7,41 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donut Boom - Mobile Game</title>
   <script type="module" crossorigin src="/STP-9408/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/STP-9408/assets/styles-DYRx69qf.css">
+  <link rel="stylesheet" crossorigin href="/STP-9408/assets/styles-DQGnEnYj.css">
 </head>
 
 <body>
   <header class="header">
   <div class="container">
     <div class="wrapper">
+      <div class="nav-logo">
+        <svg width="32" height="32" class="icon">
+          <use href="/STP-9408/assets/sprite-E8vg0sBb.svg#logo"></use>
+        </svg>
+      </div>
+
       <nav class="nav">
-        <a class="nav-logo" href="./index.html" aria-label="Site logo">
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="/STP-9408/assets/sprite-E8vg0sBb.svg#logo"></use>
-          </svg>
-        </a>
         <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-act}" href="./privacy.html">Privacy Policy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="./terms.html">Terms of Service</a>
-          </li>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Game</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#how-to-play" class="nav-link">How to Play</a></li>
+          <li><a href="#levels" class="nav-link">Levels</a></li>
+          <li><a href="#download" class="nav-link">Download</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <div class="header__burger-wrapper">
-        <button type="button" class="burger-btn" data-action="open">Open menu</button>
-        <div class="burger-menu" data-visible="close">
-          <ul>
-            <li><a href="#">link-1</a></li>
-            <li><a href="#">link-2</a></li>
-            <li><a href="#">link-3</a></li>
-            <li><a href="#">link-4</a></li>
-          </ul>
-          <button type="button" class="btn-close" data-action="close">close</button>
-        </div>
-      </div>
+
+      <button class="burger-btn" type="button" data-burger-open>
+        <svg width="24" height="24" class="icon">
+          <use href="/STP-9408/assets/sprite-E8vg0sBb.svg#burger"></use>
+        </svg>
+      </button>
     </div>
+  </div>
+
+  <!-- Burger menu - ідентичний навігації -->
+  <div class="burger-menu" data-visible="close">
+    <button class="btn-close" type="button" data-burger-close>
+      <svg width="24" height="24" class="icon">
+        <use href="/STP-9408/assets/sprite-E8vg0sBb.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="burger-list">
+      <li><a href="#hero" class="burger-link">Home</a></li>
+      <li><a href="#about" class="burger-link">About Game</a></li>
+      <li><a href="#features" class="burger-link">Features</a></li>
+      <li><a href="#gallery" class="burger-link">Gallery</a></li>
+      <li><a href="#how-to-play" class="burger-link">How to Play</a></li>
+      <li><a href="#levels" class="burger-link">Levels</a></li>
+      <li><a href="#download" class="burger-link">Download</a></li>
+      <li><a href="#faq" class="burger-link">FAQ</a></li>
+      <li><a href="#contacts" class="burger-link">Contact</a></li>
+    </ul>
   </div>
 </header>
 
