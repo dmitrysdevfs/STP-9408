@@ -129,3 +129,8 @@
   fill: currentColor;
   stroke: currentColor;
 }
+
+/* Border radius utility */
+.rounded {
+  border-radius: var(--border-radius);
+}
