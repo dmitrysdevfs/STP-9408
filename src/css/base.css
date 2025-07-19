@@ -30,23 +30,3 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
-
-/* Контейнер для обмеження ширини контенту */
-.container {
-  max-width: var(--container-desktop);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: var(--container-large);
-  }
-}
-
-@media (max-width: 767px) {
-  .container {
-    max-width: var(--container-mobile);
-    padding: 0 16px;
-  }
-}

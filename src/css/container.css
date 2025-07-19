@@ -1,19 +1,21 @@
-/* Styles for Mobile devices */
+/* Mobile: 320px - 1199px */
 .container {
-  min-width: 320px;
-  max-width: 375px;
+  max-width: var(--container-mobile);
   margin: 0 auto;
   padding: 0 16px;
 }
-/* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
+
+/* Desktop: 1200px+ */
+@media (min-width: 1200px) {
   .container {
-    max-width: 768px;
+    max-width: var(--container-desktop);
+    padding: 0 20px;
   }
 }
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1200px) {
+
+/* Large Desktop: 1440px+ (для масштабування) */
+@media (min-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: var(--container-large);
   }
 }

@@ -41,8 +41,15 @@
   line-height: 1.4;
 }
 
-/* Mobile typography - тільки desktop і mobile */
-@media (max-width: 767px) {
+.h7 {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h7-desktop);
+  line-height: 1.4;
+}
+
+/* Mobile typography: 320px - 1199px */
+@media (max-width: 1199px) {
   .h1 {
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-h1-mobile);
@@ -70,6 +77,11 @@
 
   .h6 {
     font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-h3-mobile);
+  }
+
+  .h7 {
+    font-weight: var(--font-weight-medium);
     font-size: var(--font-size-h4-mobile);
   }
 }
@@ -109,7 +121,7 @@
   margin: var(--section-margin);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .section {
     padding: var(--section-padding-mobile);
   }
