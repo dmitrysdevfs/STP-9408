@@ -1,88 +1,88 @@
-/* Typography utilities */
+/* Typography utilities - Mobile-first */
 .h1 {
   font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semi-bold);
-  font-size: var(--font-size-h1-desktop);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h1-mobile);
   line-height: 1.2;
 }
 
 .h2 {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h2-desktop);
+  font-size: var(--font-size-h2-mobile);
   line-height: 1.3;
 }
 
 .h3 {
   font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semi-bold);
-  font-size: var(--font-size-h3-desktop);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h3-mobile);
   line-height: 1.3;
 }
 
 .h4 {
   font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-h4-desktop);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h4-mobile);
   line-height: 1.4;
 }
 
 .h5 {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-h5-desktop);
+  font-size: var(--font-size-h4-mobile);
   line-height: 1.4;
 }
 
 .h6 {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-h6-desktop);
+  font-size: var(--font-size-h3-mobile);
   line-height: 1.4;
 }
 
 .h7 {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h7-desktop);
+  font-size: var(--font-size-h4-mobile);
   line-height: 1.4;
 }
 
-/* Mobile typography: 320px - 1199px */
-@media (max-width: 1199px) {
+/* Desktop typography: 1200px+ */
+@media (min-width: 1200px) {
   .h1 {
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h1-mobile);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-h1-desktop);
   }
 
   .h2 {
     font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h2-mobile);
+    font-size: var(--font-size-h2-desktop);
   }
 
   .h3 {
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-h3-mobile);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-h3-desktop);
   }
 
   .h4 {
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h4-mobile);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-h4-desktop);
   }
 
   .h5 {
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-h4-mobile);
+    font-size: var(--font-size-h5-desktop);
   }
 
   .h6 {
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-h3-mobile);
+    font-size: var(--font-size-h6-desktop);
   }
 
   .h7 {
     font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h4-mobile);
+    font-size: var(--font-size-h7-desktop);
   }
 }
 
@@ -113,18 +113,6 @@
 
 .bg-feature {
   background-color: var(--color-background-secondary);
-}
-
-/* Section spacing utilities - однакові відступи */
-.section {
-  padding: var(--section-padding-desktop);
-  margin: var(--section-margin);
-}
-
-@media (max-width: 1199px) {
-  .section {
-    padding: var(--section-padding-mobile);
-  }
 }
 
 /* Responsive images */
