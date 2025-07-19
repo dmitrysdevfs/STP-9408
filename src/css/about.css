@@ -97,3 +97,10 @@
     height: auto;
   }
 }
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .about {
+    padding: var(--section-padding-large);
+  }
+}

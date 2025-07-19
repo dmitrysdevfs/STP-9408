@@ -117,7 +117,7 @@
 }
 
 /* Mobile styles */
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .nav-list {
     display: none; /* Приховуємо десктопну навігацію на мобільних */
   }
