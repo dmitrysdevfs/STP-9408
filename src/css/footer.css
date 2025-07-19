@@ -1,21 +1,95 @@
 .footer {
-  padding: 20px 0;
+  background-color: var(--color-footer-bg);
+  border-top: 2px solid var(--color-header-bg);
+  border-bottom: 1px solid var(--color-text-light);
+  height: 204px;
+  display: flex;
+  align-items: center;
 }
-.footer-desc {
-  text-align: center;
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transform: translateY(-6px);
 }
+
+/* Логотип зверху */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-title {
+  color: var(--color-text-light);
+  line-height: 1.2;
+}
+
+/* Copyright колонки знизу */
+.footer-copyright-columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 260px;
+}
+
+.copyright-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.copyright-text {
+  color: var(--color-text-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.links-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
 .footer-link {
-  position: relative;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-.footer-link::before {
-  content: '';
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+
+.footer-link:hover {
+  color: var(--color-list-item-light);
+}
+
+.link-separator {
+  color: var(--color-text-light);
+}
+
+@media (max-width: 1199px) {
+  .footer {
+    display: none;
+  }
 }
