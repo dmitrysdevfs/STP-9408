@@ -11,8 +11,9 @@
   --font-size-h4-desktop: 24px;
   --font-size-h5-desktop: 20px;
   --font-size-h6-desktop: 18px;
+  --font-size-h7-desktop: 18px;
 
-  /* Typography - Mobile (320px - 767px) */
+  /* Typography - Mobile (320px - 1199px) */
   --font-size-h1-mobile: 32px;
   --font-size-h2-mobile: 20px;
   --font-size-h3-mobile: 15px;
@@ -42,7 +43,7 @@
 
   /* Breakpoints - тільки desktop і mobile */
   --mobile: 320px;
-  --mobile-max: 767px;
+  --mobile-max: 1199px;
   --desktop: 1200px;
   --desktop-large: 1440px;
 
