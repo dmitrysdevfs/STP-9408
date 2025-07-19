@@ -53,9 +53,9 @@
   --container-large: 1440px;
 
   /* Spacing - однакові відступи між секціями */
-  --section-padding-mobile: 40px 20px;
-  --section-padding-desktop: 80px 60px;
-  --section-padding-large: 100px 80px;
+  --section-padding-mobile: 20px 32px;
+  --section-padding-desktop: 35px 60px;
+  --section-padding-large: 50px 80px;
 
   /* Однакові відступи між секціями */
   --section-margin: 0; /* Відступи через padding секцій */

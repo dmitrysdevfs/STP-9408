@@ -152,3 +152,10 @@
     max-width: 228px;
   }
 }
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .hero {
+    padding: var(--section-padding-large);
+  }
+}
