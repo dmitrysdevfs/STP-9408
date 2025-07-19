@@ -1,7 +1,64 @@
 <article class="hero">
   <div class="container">
-    <h1 class="hero-title">
-      <span class="hero-title-gradient">Welcome</span> to Donut Boom!
-    </h1>
+    <div class="img-desc">
+      <div class="container-hero-img">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./img/hero/frame-1x-decstop.png 1x,
+              ./img/hero/Frame-2x-decstop.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ./img/hero/Frame-1x-mob.png 1x,
+              ./img/hero/Frame-2x-mob.png 2x
+            "
+          />
+          <img
+            src="./img/hero/Frame-1x-mob.png"
+            alt="Donut Boom hero image"
+            class="hero-img"
+          />
+        </picture>
+      </div>
+
+      <div class="hero-descr-cont">
+        <div class="hero-title-descr">
+          <h1 class="hero-title">
+            <span class="hero-title-gradient">Welcome</span> to Donut Boom!
+          </h1>
+          <p class="slogan">
+            "Sort. Match. Boom! The Sweetest Puzzle Game Ever."
+          </p>
+          <p class="description">
+            Jump into a delicious world of colorful donuts and addictive
+            gameplay! Perfect for puzzle lovers of all ages.
+          </p>
+        </div>
+        <div class="btn-container">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
+            class="btn google-play"
+          >
+            <img
+              src="../img/hero/logos_google-play-icon 2x mob.png"
+              class="icon"
+              alt="Google Play logo"
+            />
+            <span>Play Now on Google Play</span>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
+            class="btn watch-now"
+          >
+            <img src="" class="invisible" alt="" />
+            <span>Watch Gameplay Trailer</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </article>
