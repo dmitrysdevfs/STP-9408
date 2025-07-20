@@ -1,0 +1,167 @@
+/* Policies Page Styles */
+
+/* Main content area - dark teal background */
+.policy-content {
+  background-color: var(--color-background-main);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Hide footer on mobile */
+.footer {
+  display: none;
+}
+
+.policy-content .container {
+  padding: 20px 32px 40px;
+  text-align: left;
+}
+
+.policy-content .back-link:hover {
+  opacity: 0.8;
+}
+
+/* Main title */
+.policy-main-title {
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-light);
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Last updated text */
+.last-updated {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-light);
+  margin: 0 0 0 0;
+  opacity: 0.9;
+  text-align: left;
+}
+
+/* Policy sections */
+.policy-section {
+  margin-bottom: 32px;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section titles */
+.section-title {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-light);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Policy text */
+.policy-text {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-light);
+  line-height: 1;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.policy-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Policy lists */
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.policy-list-item {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-light);
+  line-height: 1;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+  text-align: left;
+}
+
+.policy-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.policy-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-light);
+  font-weight: bold;
+}
+
+/* Policy links */
+.policy-link {
+  color: var(--color-text-light);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.policy-link:hover {
+  opacity: 0.8;
+}
+
+/* Semi-bold text for spans */
+.policy-text span,
+.policy-list-item span,
+.last-updated span {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  .policy-content .container {
+    padding: 35px 60px 60px;
+  }
+
+  .policy-main-title {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .policy-text,
+  .policy-list-item {
+    font-size: 18px;
+  }
+
+  .last-updated {
+    font-size: 18px;
+  }
+
+  .policy-content .back-link {
+    font-size: 18px;
+  }
+
+  /* Show footer on desktop */
+  .footer {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .policy-content .container {
+    padding: 50px 80px 80px;
+  }
+}
