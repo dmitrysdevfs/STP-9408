@@ -1,52 +1,88 @@
-<header class="header">
+<header class="header js-header">
   <div class="container">
-    <div class="wrapper">
-      <div class="nav-logo">
-        <svg width="32" height="32" class="icon">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </div>
+    <div class="header-flex-wrapper">
+      <a href="#hero" class="logo-link" data-nav-link>
+        <div class="logo">
+          <img class="logo-image" src="./img/logo.png" alt="Donut Boom! Logo" loading="lazy" />
+          <div class="logo-text">
+            <span class="logo-title h4 desktop-only">Donut</span>
+            <span class="logo-title h4 desktop-only">Boom</span>
+            <span class="logo-title h4 mobile-only">Donut Boom</span>
+          </div>
+        </div>
+      </a>
 
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About Game</a></li>
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#how-to-play" class="nav-link">How to Play</a></li>
-          <li><a href="#levels" class="nav-link">Levels</a></li>
-          <li><a href="#download" class="nav-link">Download</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contacts" class="nav-link">Contact</a></li>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item">
+            <a href="#hero" class="header-nav-link js-nav-link">Home</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#about" class="header-nav-link js-nav-link">About Game</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#features" class="header-nav-link js-nav-link">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#gallery" class="header-nav-link js-nav-link">Gallery</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#how-to-play" class="header-nav-link js-nav-link">How to Play</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#levels" class="header-nav-link js-nav-link">Levels</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#download" class="header-nav-link js-nav-link">Download</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#faq" class="header-nav-link js-nav-link">FAQ</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#contacts" class="header-nav-link js-nav-link">Contact</a>
+          </li>
         </ul>
       </nav>
 
-      <button class="burger-btn" type="button" data-burger-open>
-        <svg width="24" height="24" class="icon">
-          <use href="img/sprite.svg#burger"></use>
-        </svg>
+      <!-- Mobile -->
+      <button class="mob-menu-btn" data-burger-menu type="button">
+        <span class="burger-icon">☰</span>
+        <span class="close-icon">✕</span>
       </button>
+
+      <div class="header-mob-menu" data-mobile-menu>
+        <nav class="header-mob-nav">
+
+          <ul class="mob-nav-list">
+            <li class="mob-nav-item">
+              <a href="#hero" class="mob-nav-link" data-nav-link>Home</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#about" class="mob-nav-link" data-nav-link>About Game</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#features" class="mob-nav-link" data-nav-link>Features</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#gallery" class="mob-nav-link" data-nav-link>Gallery</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#how-to-play" class="mob-nav-link" data-nav-link>How to Play</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#levels" class="mob-nav-link" data-nav-link>Levels</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#download" class="mob-nav-link" data-nav-link>Download</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#faq" class="mob-nav-link" data-nav-link>FAQ</a>
+            </li>
+            <li class="mob-nav-item">
+              <a href="#contacts" class="mob-nav-link" data-nav-link>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-
-  <!-- Burger menu - ідентичний навігації -->
-  <div class="burger-menu" data-visible="close">
-    <button class="btn-close" type="button" data-burger-close>
-      <svg width="24" height="24" class="icon">
-        <use href="img/sprite.svg#close"></use>
-      </svg>
-    </button>
-
-    <ul class="burger-list">
-      <li><a href="#hero" class="burger-link">Home</a></li>
-      <li><a href="#about" class="burger-link">About Game</a></li>
-      <li><a href="#features" class="burger-link">Features</a></li>
-      <li><a href="#gallery" class="burger-link">Gallery</a></li>
-      <li><a href="#how-to-play" class="burger-link">How to Play</a></li>
-      <li><a href="#levels" class="burger-link">Levels</a></li>
-      <li><a href="#download" class="burger-link">Download</a></li>
-      <li><a href="#faq" class="burger-link">FAQ</a></li>
-      <li><a href="#contacts" class="burger-link">Contact</a></li>
-    </ul>
-  </div>
 </header>
