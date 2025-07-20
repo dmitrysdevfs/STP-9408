@@ -22,6 +22,7 @@
   "author": "Dmytro Salyakin <d.salyaki@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "accordion": "^3.0.2",
     "accordion-js": "^3.4.1",
     "swiper": "^11.2.10",
     "vite-plugin-full-reload": "^1.2.0",

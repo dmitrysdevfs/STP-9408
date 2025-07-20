@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-
+@import 'accordion-js/dist/accordion.min.css';
 /* Variables and utilities */
 @import url('./variables.css');
 @import url('./utilities.css');
