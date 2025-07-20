@@ -30,6 +30,8 @@
 .item-play:nth-child(even) {
   background-color: #c1f1f3;
 }
+
+/* ========== DESKTOP ========== */
 @media (min-width: 1200px) {
   .how-to-play-title {
     font-family: var(--font-family);
