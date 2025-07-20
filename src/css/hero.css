@@ -1,26 +1,24 @@
 .hero {
-  padding: var(--section-padding-mobile);
   margin: 0 auto;
   background: var(--gradient-main);
 }
 
 .container-hero-img {
   border-radius: var(--border-radius);
-  margin-bottom: 15px;
   width: 100%;
   height: 256px;
   position: relative;
   overflow: hidden;
 }
 .img-desc {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 103px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 .hero-img {
   display: block;
-  max-width: 256px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius);
@@ -28,34 +26,41 @@
 
 .hero-descr-cont {
   width: 100%;
-  max-width: 256px;
   color: var(--color-text-light);
+  text-align: left;
 }
 
 .hero-title {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-h1-mobile);
-  margin-top: 15px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.1;
 }
 
 .slogan {
   font-size: var(--font-size-h2-mobile);
   font-weight: var(--font-weight-medium);
-  margin-top: 19px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .description {
-  margin-top: 25px;
+  margin-top: 0;
+  margin-bottom: 20px !important;
   font-size: var(--font-size-h3-mobile);
   font-weight: var(--font-weight-regular);
+  text-align: left;
+  line-height: 1.4;
 }
 
 .btn-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
-  margin-top: 20px;
+  align-items: flex-start;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -77,16 +82,16 @@
 
 .google-play {
   background-color: var(--color-accent);
-  max-width: 256px;
   width: 100%;
+  max-width: 280px;
 }
 .btn-play-now {
   text-align: center;
 }
 .watch-now {
   background-color: var(--color-text-light);
-  max-width: 256px;
   width: 100%;
+  max-width: 280px;
 }
 
 .icon {
@@ -96,17 +101,13 @@
 }
 
 @media (min-width: 1200px) {
-  .hero {
-    padding: var(--section-padding-desktop);
-  }
-
   .img-desc {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 60px;
-    height: 100%;
+    text-align: left;
   }
 
   .container-hero-img {
@@ -122,6 +123,7 @@
     display: flex;
     flex-direction: column;
     max-width: 526px;
+    text-align: left;
   }
 
   .hero-title {
@@ -138,6 +140,7 @@
   .description {
     font-size: var(--font-size-h4-desktop);
     margin-top: 25px;
+    margin-bottom: 20px !important;
   }
 
   .btn-container {

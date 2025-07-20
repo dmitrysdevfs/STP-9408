@@ -48,17 +48,17 @@
   --desktop-large: 1440px;
 
   /* Container max-widths */
-  --container-mobile: 320px;
+  --container-mobile: 256px; /* 320px - 32px - 32px для точного розміру */
   --container-desktop: 1200px;
   --container-large: 1440px;
 
-  /* Spacing - однакові відступи між секціями */
-  --section-padding-mobile: 40px 20px;
-  --section-padding-desktop: 80px 60px;
-  --section-padding-large: 100px 80px;
+  /* Spacing - відступи контейнерів */
+  --container-padding-mobile: 20px 32px;
+  --container-padding-desktop: 35px 60px;
+  --container-padding-large: 50px 80px;
 
-  /* Однакові відступи між секціями */
-  --section-margin: 0; /* Відступи через padding секцій */
+  /* Відступи між секціями */
+  --section-margin: 0; /* Відступи через padding контейнерів */
 
   /* Border radius - консистентний по всьому макету */
   --border-radius: 10px;

@@ -18,7 +18,6 @@
 }
 
 .about {
-  padding: var(--section-padding-mobile);
   margin: var(--section-margin);
 }
 
@@ -65,10 +64,6 @@
 
   [data-toggle] {
     display: none !important;
-  }
-
-  .about {
-    padding: var(--section-padding-desktop);
   }
 
   .about-title {

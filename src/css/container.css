@@ -2,14 +2,14 @@
 .container {
   max-width: var(--container-mobile);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: var(--container-padding-mobile);
 }
 
 /* Desktop: 1200px+ */
 @media (min-width: 1200px) {
   .container {
     max-width: var(--container-desktop);
-    padding: 0 20px;
+    padding: var(--container-padding-desktop);
   }
 }
 
@@ -17,5 +17,6 @@
 @media (min-width: 1440px) {
   .container {
     max-width: var(--container-large);
+    padding: var(--container-padding-large);
   }
 }
