@@ -1,0 +1,148 @@
+[data-more-level][hidden] {
+  display: none;
+}
+
+.read-more-btn-level {
+  font-size: 16px;
+  display: block;
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.container-descr-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-text,
+.container-img-level {
+  width: 100%;
+}
+.container-img-level {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+.level-img {
+  flex: 1 1 0;
+  max-width: 100%;
+}
+.level-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.level-title,
+.ready-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h3-mobile);
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.level-text,
+.text-version {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: 15px;
+  color: var(--color-text-light);
+}
+
+.container-ready {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.btn-levels {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-h3-mobile);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: var(--color-text-dark);
+  min-height: 60px;
+  gap: 12px;
+  box-sizing: border-box;
+  background-color: var(--color-accent);
+  padding: 0 12px;
+}
+.icon-btn-level {
+  height: auto;
+  width: 35px;
+  display: block;
+}
+.level-span {
+  text-align: center;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+}
+
+/* ====== Desktop ====== */
+@media (min-width: 1200px) {
+  [data-more-level] {
+    display: inline !important;
+  }
+
+  [data-toggle-level] {
+    display: none !important;
+  }
+
+  .container-descr-img {
+    flex-direction: row-reverse;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .container-img-level,
+  .container-text {
+    flex: 1;
+  }
+
+  .level-title,
+  .ready-title {
+    font-size: var(--font-size-h1-desktop);
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .level-text {
+    font-size: 18px;
+  }
+
+  .img-left {
+    margin-top: -10px;
+  }
+  .img-right {
+    margin-top: 60px;
+  }
+
+  .btn-levels {
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0 30px;
+  }
+
+  .level-span {
+    margin-left: 0;
+  }
+}

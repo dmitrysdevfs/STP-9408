@@ -11,49 +11,59 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 256px;
-  height: auto;
+  max-width: var(--container-mobile);
   margin: 0 auto;
 }
-.icon-text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 15px;
-  max-width: 232px;
-  text-align: left;
-}
+
 .icon-item {
   display: flex;
   flex-direction: column;
-  background-color: #69b9d4;
-  border-radius: 10px;
   align-items: center;
-  padding: 0 12px;
+  justify-content: flex-start;
+  gap: 12px;
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius);
+  padding: 16px 12px;
+  width: 100%;
+  min-height: 140px;
+  box-sizing: border-box;
 }
+
+.icon-text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h4-mobile);
+  max-width: 232px;
+  text-align: left;
+  color: var(--color-text-dark);
+}
+
 .icon {
   display: block;
   stroke: none;
 }
 .stroke {
   stroke: currentColor;
-  color: #ffffff;
+  color: var(--color-text-light);
 }
 @media (min-width: 1200px) {
   .features-title {
-    font-weight: 600;
-    font-size: 32px;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-h2-desktop);
     text-align: center;
-    color: #ffffff;
+    color: var(--color-text-light);
     margin-bottom: 10px;
   }
+
   .icon-text {
-    font-size: 20px;
+    font-size: var(--font-size-h5-desktop);
   }
   .accent {
     font-weight: bold;
   }
   .icon-container {
-    max-width: 1200px;
+    max-width: var(--container-desktop);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -62,12 +72,11 @@
     flex-direction: row;
   }
   .icon-item {
-    flex: 1 1 250px; /* может сжиматься и расти, базовая ширина 250px */
-    max-width: 250px;
+    flex: 1 1 calc((100% - 72px) / 4); /* может сжиматься и расти, базовая ширина 250px */
+    max-width: calc((100% - 72px) / 4);
     height: auto; /* высота под содержимое */
     aspect-ratio: 1 / 1; /* квадратный элемент */
     box-sizing: border-box;
-  }
-  .icon {
+    padding: 20px 10px 0 10px;
   }
 }

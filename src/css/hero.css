@@ -68,7 +68,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: var(--font-size-h3-mobile);
   font-weight: var(--font-weight-regular);
   border-radius: var(--border-radius);
@@ -77,6 +77,7 @@
   min-height: 60px;
   gap: 8px;
   box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .google-play {
@@ -84,7 +85,9 @@
   width: 100%;
   max-width: 280px;
 }
-
+.btn-play-now {
+  text-align: center;
+}
 .watch-now {
   background-color: var(--color-text-light);
   width: 100%;
@@ -92,8 +95,9 @@
 }
 
 .icon {
-  padding: 10px 8px 10px 10px;
   width: 35px;
+  height: auto;
+  display: block;
 }
 
 @media (min-width: 1200px) {
