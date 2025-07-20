@@ -46,6 +46,8 @@
   stroke: currentColor;
   color: var(--color-text-light);
 }
+
+/* ========== DESKTOP ========== */
 @media (min-width: 1200px) {
   .features-title {
     font-family: var(--font-family-primary);
