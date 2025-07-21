@@ -6,7 +6,7 @@ Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,
-  spaceBetween: 0,
+  spaceBetween: 16,
   loop: false,
   navigation: {
     nextEl: '.gallery-button-next',
