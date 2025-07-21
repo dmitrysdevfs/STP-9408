@@ -42,9 +42,10 @@
   display: block;
   stroke: none;
 }
-.stroke {
+.icon.stroke {
   stroke: currentColor;
   color: var(--color-text-light);
+  fill: #ffffff !important;
 }
 
 /* ========== DESKTOP ========== */

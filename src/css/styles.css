@@ -5,6 +5,9 @@
   |============================
 */
 @import 'accordion-js/dist/accordion.min.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 /* Variables and utilities */
 @import url('./variables.css');
 @import url('./utilities.css');
