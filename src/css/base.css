@@ -13,6 +13,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 60px;
+}
+
 body {
   display: flex;
   flex-direction: column;
