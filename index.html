@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/STP-9408/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/STP-9408/android-chrome-192x192.png" />
   <script type="module" crossorigin src="/STP-9408/assets/vendor-DUtJCKa9.js"></script>
-  <script type="module" crossorigin src="/STP-9408/assets/main-Bkj0yCqZ.js"></script>
-  <link rel="stylesheet" crossorigin href="/STP-9408/assets/main-CE-0bfbS.css">
+  <script type="module" crossorigin src="/STP-9408/assets/main-BcXsd_Lk.js"></script>
+  <link rel="stylesheet" crossorigin href="/STP-9408/assets/main-uE761pqY.css">
   <link rel="stylesheet" crossorigin href="/STP-9408/assets/vendor-pvxkJjp9.css">
 </head>
 
@@ -24,7 +24,7 @@
   <header class="header js-header">
   <div class="container">
     <div class="header-flex-wrapper">
-      <a href="#hero" class="logo-link" data-nav-link>
+      <a href="#hero" class="logo-link">
         <div class="logo">
           <img class="logo-image" src="/STP-9408/assets/logo-lypemcMd.png" alt="Donut Boom! Logo" loading="lazy" />
           <div class="logo-text">
@@ -38,31 +38,31 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a href="#hero" class="header-nav-link js-nav-link">Home</a>
+            <a href="#hero" class="header-nav-link" data-nav-link>Home</a>
           </li>
           <li class="header-nav-item">
-            <a href="#about" class="header-nav-link js-nav-link">About Game</a>
+            <a href="#about" class="header-nav-link" data-nav-link>About Game</a>
           </li>
           <li class="header-nav-item">
-            <a href="#features" class="header-nav-link js-nav-link">Features</a>
+            <a href="#features" class="header-nav-link" data-nav-link>Features</a>
           </li>
           <li class="header-nav-item">
-            <a href="#gallery" class="header-nav-link js-nav-link">Gallery</a>
+            <a href="#gallery" class="header-nav-link" data-nav-link>Gallery</a>
           </li>
           <li class="header-nav-item">
-            <a href="#how-to-play" class="header-nav-link js-nav-link">How to Play</a>
+            <a href="#how-to-play" class="header-nav-link" data-nav-link>How to Play</a>
           </li>
           <li class="header-nav-item">
-            <a href="#levels" class="header-nav-link js-nav-link">Levels</a>
+            <a href="#levels" class="header-nav-link" data-nav-link>Levels</a>
           </li>
           <li class="header-nav-item">
-            <a href="#download" class="header-nav-link js-nav-link">Download</a>
+            <a href="#download" class="header-nav-link" data-nav-link>Download</a>
           </li>
           <li class="header-nav-item">
-            <a href="#faq" class="header-nav-link js-nav-link">FAQ</a>
+            <a href="#faq" class="header-nav-link" data-nav-link>FAQ</a>
           </li>
           <li class="header-nav-item">
-            <a href="#contacts" class="header-nav-link js-nav-link">Contact</a>
+            <a href="#contacts" class="header-nav-link" data-nav-link>Contact</a>
           </li>
         </ul>
       </nav>
@@ -112,24 +112,14 @@
 
   <main>
     <!-- Loads the specified .html file -->
-    <article class="hero">
+    <section class="hero" id="hero" data-section>
   <div class="container">
     <div class="img-desc">
       <div class="container-hero-img">
         <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="/STP-9408/assets/frame-1-desktop-1x-BeuzTTCT.png 1x, /STP-9408/assets/frame-1-desktop-2x-CXfoQ1Mx.png 2x"
-          />
-          <source
-            media="(max-width: 1199px)"
-            srcset="/STP-9408/assets/frame-1-mobile-1x-BxzdJmOX.png 1x, /STP-9408/assets/frame-1-mobile-2x-ClIuWC7Q.png 2x"
-          />
-          <img
-            src="/STP-9408/assets/frame-1-mobile-1x-BxzdJmOX.png"
-            alt="Donut Boom hero image"
-            class="hero-img"
-          />
+          <source media="(min-width: 1200px)" srcset="/STP-9408/assets/frame-1-desktop-1x-BeuzTTCT.png 1x, /STP-9408/assets/frame-1-desktop-2x-CXfoQ1Mx.png 2x" />
+          <source media="(max-width: 1199px)" srcset="/STP-9408/assets/frame-1-mobile-1x-BxzdJmOX.png 1x, /STP-9408/assets/frame-1-mobile-2x-ClIuWC7Q.png 2x" />
+          <img src="/STP-9408/assets/frame-1-mobile-1x-BxzdJmOX.png" alt="Donut Boom hero image" class="hero-img" />
         </picture>
       </div>
 
@@ -147,21 +137,13 @@
           </p>
         </div>
         <div class="btn-container">
-          <a
-            href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
-            class="btn google-play"
-          >
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABOCAMAAABFYfvlAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAFpQTFRFR3BM4lk0MadQ+boD6EM0M6dQ+roDM6hS6EM0+7wE6UM0M6dY/L0D5kU66kM0NKhT/LwD60M0+7wE7roJ+rEIba497VYtQoX0P4zWO5aqNKhTlmSVs1l16kM1GO5DfQAAABJ0Uk5TABUjLDpGYGtwgoiira/C3uTpuwcUmwAAAaZJREFUeNql1IFugjAUheGiICIK1M3d2en7v+YWY/JnqeHc7Z4H+EL/0KbHunEuZR67FFo3l+fGTYDpCwtIm/Jrc/9PZ34CSF3kVNHDjYWx/s+SXQsLZDKgUCYDCmUyoFAmAwplMqDX0sbpAIUymYZK37gcoEAmExCZtKMhnckUxHrlaEhnMgF5M5mGdCYcP3QZhOODLm/nZbfiKAjmZ8u2dpwQzGNHJBwHBPPcMtSOhmAYmXA0BMPIhKMhGEYmW4EEQyYcCV0qgkw4EoKpN+C8hjQDZAKCWdkWZwWSzPkoHLvCiA8yAcGsFzKxT5iQ8/XxHnBg7ncPtEuSARKdBeOBlpQE44N2KQkGSNwLwQCJeyoYAfFuCEZBy9AkHMEA+d9VGA2h4GgGiDDMzwARhrmYGjqi4PgYIMIwJwO0EKZyNMMyYWrHzxxQKsfPTG1KDucmjoRSzc/kQ1qZYEQY5mQmFOHcRBgxB5P3SQ9GhBGDEWHEYMR/JwYjwmgnFAbnFgmDkyNh2CkUhrUvFMIwuSkUhjU5FIa1ORSGNScRxr32MOV82geUb8X/QRdECy0TAAAAAElFTkSuQmCC"
-              class="icon"
-              alt="Google Play logo"
-            />
+          <a href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
+            class="btn google-play">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABOCAMAAABFYfvlAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAFpQTFRFR3BM4lk0MadQ+boD6EM0M6dQ+roDM6hS6EM0+7wE6UM0M6dY/L0D5kU66kM0NKhT/LwD60M0+7wE7roJ+rEIba497VYtQoX0P4zWO5aqNKhTlmSVs1l16kM1GO5DfQAAABJ0Uk5TABUjLDpGYGtwgoiira/C3uTpuwcUmwAAAaZJREFUeNql1IFugjAUheGiICIK1M3d2en7v+YWY/JnqeHc7Z4H+EL/0KbHunEuZR67FFo3l+fGTYDpCwtIm/Jrc/9PZ34CSF3kVNHDjYWx/s+SXQsLZDKgUCYDCmUyoFAmAwplMqDX0sbpAIUymYZK37gcoEAmExCZtKMhnckUxHrlaEhnMgF5M5mGdCYcP3QZhOODLm/nZbfiKAjmZ8u2dpwQzGNHJBwHBPPcMtSOhmAYmXA0BMPIhKMhGEYmW4EEQyYcCV0qgkw4EoKpN+C8hjQDZAKCWdkWZwWSzPkoHLvCiA8yAcGsFzKxT5iQ8/XxHnBg7ncPtEuSARKdBeOBlpQE44N2KQkGSNwLwQCJeyoYAfFuCEZBy9AkHMEA+d9VGA2h4GgGiDDMzwARhrmYGjqi4PgYIMIwJwO0EKZyNMMyYWrHzxxQKsfPTG1KDucmjoRSzc/kQ1qZYEQY5mQmFOHcRBgxB5P3SQ9GhBGDEWHEYMR/JwYjwmgnFAbnFgmDkyNh2CkUhrUvFMIwuSkUhjU5FIa1ORSGNScRxr32MOV82geUb8X/QRdECy0TAAAAAElFTkSuQmCC" class="icon" alt="Google Play logo" />
             <span>Play Now on Google Play</span>
           </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
-            class="btn watch-now"
-          >
+          <a href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
+            class="btn watch-now">
             <img src="" class="invisible" alt="" />
             <span>Watch Gameplay Trailer</span>
           </a>
@@ -169,9 +151,8 @@
       </div>
     </div>
   </div>
-</article>
-
-    <article class="about">
+</section>
+    <section class="about" id="about" data-section>
   <div class="container">
     <h2 class="about-title">About the Game</h2>
     <p class="about-text">
@@ -223,8 +204,8 @@
       </div>
     </div>
   </div>
-</article>
-    <article class="features">
+</section>
+    <section class="features" id="features" data-section>
   <div class="container">
     <h2 class="features-title">Features</h2>
     <div class="icon-container">
@@ -293,9 +274,8 @@
       </div>
     </div>
   </div>
-</article>
-
-    <article class="gallery">
+</section>
+    <section class="gallery" id="gallery" data-section>
   <div class="container">
     <h2 class="gallery-title">Gallery</h2>
     <div class="container-gallery swiper">
@@ -372,8 +352,8 @@
       </div>
     </div>
   </div>
-</article>
-    <article class="how-to-play">
+</section>
+    <section class="how-to-play" id="how-to-play" data-section>
   <div class="container">
     <h2 class="how-to-play-title">How to Play</h2>
     <div class="container-play">
@@ -395,9 +375,8 @@
       </ol>
     </div>
   </div>
-</article>
-
-    <article class="levels">
+</section>
+    <section class="levels" id="levels" data-section>
   <div class="container">
     <h2 class="level-title">Levels & Difficulty</h2>
     <div class="container-descr-img">
@@ -432,67 +411,36 @@
       <div class="container-img-level">
         <div class="level-img">
           <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="/STP-9408/assets/frame-18-desktop-1x-BkeiEAPA.png 1x, /STP-9408/assets/frame-18-desktop-2x-BAqtLmvn.png 2x"
-            />
-            <source
-              media="(max-width: 767px)"
-              srcset="/STP-9408/assets/frame-51-mobile-1x-Cw4w59bt.png 1x, /STP-9408/assets/frame-51-mobile-2x-Av0NNqBX.png 2x"
-            />
-            <img
-              class="img img-left"
-              src="/STP-9408/assets/frame-18-desktop-2x-BAqtLmvn.png"
-              alt="Level image-1"
-            />
+            <source media="(min-width: 768px)" srcset="/STP-9408/assets/frame-18-desktop-1x-BkeiEAPA.png 1x, /STP-9408/assets/frame-18-desktop-2x-BAqtLmvn.png 2x" />
+            <source media="(max-width: 767px)" srcset="/STP-9408/assets/frame-51-mobile-1x-Cw4w59bt.png 1x, /STP-9408/assets/frame-51-mobile-2x-Av0NNqBX.png 2x" />
+            <img class="img img-left" src="/STP-9408/assets/frame-18-desktop-2x-BAqtLmvn.png" alt="Level image-1" />
           </picture>
         </div>
 
         <div class="level-img">
           <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="/STP-9408/assets/frame-19-desktop-1x-SifmNDFd.png 1x, /STP-9408/assets/frame-19-desktop-2x-BPZefdq3.png 2x"
-            />
-            <source
-              media="(max-width: 767px)"
-              srcset="/STP-9408/assets/frame-52-mobile-1x-Clnii_Vf.png 1x, /STP-9408/assets/frame-52-mobile-2x-CbJVpnoQ.png 2x"
-            />
-            <img
-              class="img img-right"
-              src="/STP-9408/assets/frame-19-desktop-2x-BPZefdq3.png"
-              alt="Level image-2"
-            />
+            <source media="(min-width: 768px)" srcset="/STP-9408/assets/frame-19-desktop-1x-SifmNDFd.png 1x, /STP-9408/assets/frame-19-desktop-2x-BPZefdq3.png 2x" />
+            <source media="(max-width: 767px)" srcset="/STP-9408/assets/frame-52-mobile-1x-Clnii_Vf.png 1x, /STP-9408/assets/frame-52-mobile-2x-CbJVpnoQ.png 2x" />
+            <img class="img img-right" src="/STP-9408/assets/frame-19-desktop-2x-BPZefdq3.png" alt="Level image-2" />
           </picture>
         </div>
       </div>
     </div>
   </div>
-</article>
-
-    <article class="download">
+</section>
+    <section class="download" id="download" data-section>
   <div class="container container-ready">
     <h2 class="ready-title">Ready to dive in?</h2>
-    <a
-      href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us"
-      class="btn-levels"
-    >
-      <img
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABOCAMAAABFYfvlAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAFpQTFRFR3BM4lk0MadQ+boD6EM0M6dQ+roDM6hS6EM0+7wE6UM0M6dY/L0D5kU66kM0NKhT/LwD60M0+7wE7roJ+rEIba497VYtQoX0P4zWO5aqNKhTlmSVs1l16kM1GO5DfQAAABJ0Uk5TABUjLDpGYGtwgoiira/C3uTpuwcUmwAAAaZJREFUeNql1IFugjAUheGiICIK1M3d2en7v+YWY/JnqeHc7Z4H+EL/0KbHunEuZR67FFo3l+fGTYDpCwtIm/Jrc/9PZ34CSF3kVNHDjYWx/s+SXQsLZDKgUCYDCmUyoFAmAwplMqDX0sbpAIUymYZK37gcoEAmExCZtKMhnckUxHrlaEhnMgF5M5mGdCYcP3QZhOODLm/nZbfiKAjmZ8u2dpwQzGNHJBwHBPPcMtSOhmAYmXA0BMPIhKMhGEYmW4EEQyYcCV0qgkw4EoKpN+C8hjQDZAKCWdkWZwWSzPkoHLvCiA8yAcGsFzKxT5iQ8/XxHnBg7ncPtEuSARKdBeOBlpQE44N2KQkGSNwLwQCJeyoYAfFuCEZBy9AkHMEA+d9VGA2h4GgGiDDMzwARhrmYGjqi4PgYIMIwJwO0EKZyNMMyYWrHzxxQKsfPTG1KDucmjoRSzc/kQ1qZYEQY5mQmFOHcRBgxB5P3SQ9GhBGDEWHEYMR/JwYjwmgnFAbnFgmDkyNh2CkUhrUvFMIwuSkUhjU5FIa1ORSGNScRxr32MOV82geUb8X/QRdECy0TAAAAAElFTkSuQmCC"
-        class="icon-btn-level"
-        alt="Google Play logo"
-      />
-      <span class="level-span"
-        >Download on Google Play <br />(Android 6.0 and up)</span
-      >
+    <a href="https://play.google.com/store/apps/details?id=com.beecreator.donutboom&hl=en&gl=us" class="btn-levels">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABOCAMAAABFYfvlAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAFpQTFRFR3BM4lk0MadQ+boD6EM0M6dQ+roDM6hS6EM0+7wE6UM0M6dY/L0D5kU66kM0NKhT/LwD60M0+7wE7roJ+rEIba497VYtQoX0P4zWO5aqNKhTlmSVs1l16kM1GO5DfQAAABJ0Uk5TABUjLDpGYGtwgoiira/C3uTpuwcUmwAAAaZJREFUeNql1IFugjAUheGiICIK1M3d2en7v+YWY/JnqeHc7Z4H+EL/0KbHunEuZR67FFo3l+fGTYDpCwtIm/Jrc/9PZ34CSF3kVNHDjYWx/s+SXQsLZDKgUCYDCmUyoFAmAwplMqDX0sbpAIUymYZK37gcoEAmExCZtKMhnckUxHrlaEhnMgF5M5mGdCYcP3QZhOODLm/nZbfiKAjmZ8u2dpwQzGNHJBwHBPPcMtSOhmAYmXA0BMPIhKMhGEYmW4EEQyYcCV0qgkw4EoKpN+C8hjQDZAKCWdkWZwWSzPkoHLvCiA8yAcGsFzKxT5iQ8/XxHnBg7ncPtEuSARKdBeOBlpQE44N2KQkGSNwLwQCJeyoYAfFuCEZBy9AkHMEA+d9VGA2h4GgGiDDMzwARhrmYGjqi4PgYIMIwJwO0EKZyNMMyYWrHzxxQKsfPTG1KDucmjoRSzc/kQ1qZYEQY5mQmFOHcRBgxB5P3SQ9GhBGDEWHEYMR/JwYjwmgnFAbnFgmDkyNh2CkUhrUvFMIwuSkUhjU5FIa1ORSGNScRxr32MOV82geUb8X/QRdECy0TAAAAAElFTkSuQmCC" class="icon-btn-level" alt="Google Play logo" />
+      <span class="level-span">Download on Google Play <br />(Android 6.0 and up)</span>
     </a>
     <p class="text-version">
       Version: 1.0 | Updated: Dec 30, 2024 | 500+ Downloads
     </p>
   </div>
-</article>
-
-    <article class="faq">
+</section>
+    <section class="faq" id="faq" data-section>
   <div class="container">
     <h2 class="faq-title">FAQ</h2>
     <div class="faq-container">
@@ -747,9 +695,8 @@
       </ul>
     </div>
   </div>
-</article>
-
-    <article class="contacts">
+</section>
+    <section class="contacts" id="contacts" data-section>
   <div class="container">
     <h2 class="contacts-title">Contact Us</h2>
     <div class="container-contact">
@@ -811,7 +758,7 @@
       <p>We’d love to hear from you and keep making Donut Boom even sweeter!</p>
     </div>
   </div>
-</article>
+</section>
   </main>
 
   <footer class="footer">
