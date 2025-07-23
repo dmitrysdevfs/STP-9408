@@ -4,3 +4,4 @@ import './js/levels.js';
 import './js/faq.js';
 import './js/gallery.js';
 import './js/navigation.js';
+import './js/cookies-popup.js';

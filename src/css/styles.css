@@ -34,3 +34,6 @@
 
 /* Pages style */
 @import url('./policies.css');
+
+/* Components style */
+@import url('./cookies-popup.css');
