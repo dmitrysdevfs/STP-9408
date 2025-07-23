@@ -238,7 +238,7 @@
 
   .header-flex-wrapper {
     height: 76px;
-    /* gap: 120px; */
+    gap: 80px;
   }
 
   .logo-image {

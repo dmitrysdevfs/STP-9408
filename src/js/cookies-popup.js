@@ -1,87 +1,142 @@
 // Cookies Popup
-document.addEventListener('DOMContentLoaded', function () {
-  const storageKey = 'cookiesConsent';
-
-  // Перевіряємо, чи користувач вже дав згоду
-  if (localStorage.getItem(storageKey) !== null) {
-    return;
+class CookiesPopup {
+  constructor() {
+    this.popup = null;
+    this.storageKey = 'cookiesConsent';
+    this.init();
   }
 
-  // Створюємо popup
-  const popupHTML = `
-    <div class="cookies-popup" id="cookiesPopup">
-      <div class="cookies-popup__content">
-        <h2 class="cookies-popup__title">Cookies Policy</h2>
-        <p class="cookies-popup__text">
-          We use cookies to improve your experience on our website.<br class="desktop-only">
-          By browsing this website, you agree to our use of cookies.
-        </p>
-        <div class="cookies-popup__buttons">
-          <button class="cookies-popup__button cookies-popup__button--accept" id="acceptCookies">
-            Accept Cookies
-          </button>
-          <button class="cookies-popup__button cookies-popup__button--decline" id="declineCookies">
-            Decline Cookies
-          </button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  document.body.insertAdjacentHTML('beforeend', popupHTML);
-
-  // Чекаємо трохи, щоб DOM оновився
-  setTimeout(() => {
-    const popup = document.getElementById('cookiesPopup');
-    const acceptBtn = document.getElementById('acceptCookies');
-    const declineBtn = document.getElementById('declineCookies');
-
-    // Перевіряємо, чи елементи існують
-    if (!popup || !acceptBtn || !declineBtn) {
-      console.error('Cookies popup elements not found');
+  init() {
+    if (this.hasUserConsent()) {
       return;
     }
 
-    // Показуємо popup
-    popup.classList.add('active');
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.createPopup());
+    } else {
+      this.createPopup();
+    }
+  }
 
-    // Обробники подій
-    acceptBtn.addEventListener('click', function () {
-      localStorage.setItem(storageKey, 'accepted');
-      hidePopup();
-      console.log('Cookies accepted');
-    });
+  hasUserConsent() {
+    return localStorage.getItem(this.storageKey) !== null;
+  }
 
-    declineBtn.addEventListener('click', function () {
-      localStorage.setItem(storageKey, 'declined');
-      hidePopup();
-      console.log('Cookies declined');
-    });
-
-    // Закриття по кліку на overlay
-    popup.addEventListener('click', function (e) {
-      if (e.target === popup) {
-        localStorage.setItem(storageKey, 'declined');
-        hidePopup();
-        console.log('Cookies declined');
+  async createPopup() {
+    try {
+      const response = await fetch('./partials/cookies-popup.html');
+      if (!response.ok) {
+        throw new Error('Failed to load cookies popup template');
       }
-    });
 
-    // Запобігання закриття при кліку на контент
-    const content = popup.querySelector('.cookies-popup__content');
-    if (content) {
-      content.addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
+      const popupHTML = await response.text();
+      document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+      setTimeout(() => {
+        this.popup = document.getElementById('cookiesPopup');
+        if (!this.popup) {
+          console.error('Cookies popup element not found');
+          return;
+        }
+
+        this.addEventListeners();
+        this.showPopup();
+      }, 50);
+    } catch (error) {
+      console.error('Error loading cookies popup:', error);
+
+      this.createFallbackPopup();
+    }
+  }
+
+  createFallbackPopup() {
+    const popupHTML = `
+      <div class="cookies-popup" id="cookiesPopup">
+        <div class="cookies-popup__content">
+          <h2 class="cookies-popup__title">Cookies Policy</h2>
+          <p class="cookies-popup__text">
+            We use cookies to improve your experience on our website.<br class="desktop-only">
+            By browsing this website, you agree to our use of cookies.
+          </p>
+          <div class="cookies-popup__buttons">
+            <button class="cookies-popup__button cookies-popup__button--accept" id="acceptCookies">
+              Accept Cookies
+            </button>
+            <button class="cookies-popup__button cookies-popup__button--decline" id="declineCookies">
+              Decline Cookies
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+    setTimeout(() => {
+      this.popup = document.getElementById('cookiesPopup');
+      if (this.popup) {
+        this.addEventListeners();
+        this.showPopup();
+      }
+    }, 50);
+  }
+
+  addEventListeners() {
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => this.handleAccept());
     }
 
-    function hidePopup() {
-      popup.classList.remove('active');
+    if (declineBtn) {
+      declineBtn.addEventListener('click', () => this.handleDecline());
+    }
+
+    if (this.popup) {
+      this.popup.addEventListener('click', e => {
+        if (e.target === this.popup) {
+          this.handleDecline();
+        }
+      });
+
+      const content = this.popup.querySelector('.cookies-popup__content');
+      if (content) {
+        content.addEventListener('click', e => {
+          e.stopPropagation();
+        });
+      }
+    }
+  }
+
+  showPopup() {
+    if (this.popup) {
+      this.popup.classList.add('active');
+    }
+  }
+
+  hidePopup() {
+    if (this.popup) {
+      this.popup.classList.remove('active');
       setTimeout(() => {
-        if (popup && popup.parentNode) {
-          popup.parentNode.removeChild(popup);
+        if (this.popup && this.popup.parentNode) {
+          this.popup.parentNode.removeChild(this.popup);
         }
       }, 300);
     }
-  }, 50);
-});
+  }
+
+  handleAccept() {
+    localStorage.setItem(this.storageKey, 'accepted');
+    this.hidePopup();
+    console.log('Cookies accepted');
+  }
+
+  handleDecline() {
+    localStorage.setItem(this.storageKey, 'declined');
+    this.hidePopup();
+    console.log('Cookies declined');
+  }
+}
+
+const cookiesPopup = new CookiesPopup();

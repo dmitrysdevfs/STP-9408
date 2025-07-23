@@ -68,7 +68,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   font-size: var(--font-size-h3-mobile);
   font-weight: var(--font-weight-regular);
   min-height: 60px;
