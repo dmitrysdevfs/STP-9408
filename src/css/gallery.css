@@ -1,11 +1,15 @@
 .gallery-title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h5-desktop);
+  font-size: var(--font-size-h2-mobile);
   color: var(--color-text-light);
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+.gallery {
+  margin: var(--section-margin);
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -106,7 +110,7 @@
 @media (min-width: 1200px) {
   .gallery-title {
     font-weight: var(--font-weight-semi-bold);
-    font-size: var(--font-size-h2-desktop);
+    font-size: var(--font-size-h3-desktop);
     margin-bottom: 17px;
   }
   .swiper-wrapper {

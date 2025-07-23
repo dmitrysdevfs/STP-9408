@@ -1,3 +1,7 @@
+.contacts {
+  margin: var(--section-margin);
+}
+
 .contacts-title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
@@ -44,7 +48,7 @@
 /* ========== DESKTOP ========== */
 @media (min-width: 1200px) {
   .contacts-title {
-    font-size: var(--font-size-h2-desktop);
+    font-size: var(--font-size-h3-desktop);
     font-weight: var(--font-weight-semi-bold);
   }
   .container-contact {

@@ -16,6 +16,10 @@
   margin-left: auto;
 }
 
+.levels {
+  margin: var(--section-margin);
+}
+
 .container-descr-img {
   display: flex;
   flex-direction: column;
@@ -46,7 +50,7 @@
 .level-title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h3-mobile);
+  font-size: var(--font-size-h2-mobile);
   color: var(--color-text-light);
   text-align: center;
   margin-bottom: 10px;
@@ -81,7 +85,7 @@
   }
 
   .level-title {
-    font-size: var(--font-size-h1-desktop);
+    font-size: var(--font-size-h3-desktop);
     font-weight: var(--font-weight-semi-bold);
   }
 
