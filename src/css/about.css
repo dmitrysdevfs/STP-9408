@@ -58,6 +58,10 @@
 
 /* ========== DESKTOP ========== */
 @media (min-width: 1200px) {
+  .about {
+    background-color: var(--color-background-secondary);
+  }
+
   [data-more] {
     display: inline !important;
   }

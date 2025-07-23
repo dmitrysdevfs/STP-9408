@@ -71,27 +71,44 @@
   justify-content: flex-start;
   font-size: var(--font-size-h3-mobile);
   font-weight: var(--font-weight-regular);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  color: var(--color-text-dark);
   min-height: 60px;
   gap: 8px;
   box-sizing: border-box;
   padding: 0 10px;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
 }
 
 .google-play {
   background-color: var(--color-accent);
+  color: var(--color-text-light);
   width: 100%;
   max-width: 280px;
 }
+
+.google-play:hover {
+  transform: translateY(-2px);
+  background-color: #e0911a;
+  box-shadow: 0 4px 12px rgba(242, 162, 31, 0.3);
+}
+
 .btn-play-now {
   text-align: center;
 }
+
 .watch-now {
   background-color: var(--color-text-light);
+  color: var(--color-text-dark);
+  border: 2px solid var(--color-text-light);
   width: 100%;
   max-width: 280px;
+}
+
+.watch-now:hover {
+  transform: translateY(-2px);
+  background-color: transparent;
+  color: var(--color-text-light);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .icon {
@@ -150,6 +167,10 @@
     gap: 21px;
     margin-top: auto;
     width: 100%;
+  }
+
+  .btn {
+    font-size: var(--font-size-h6-desktop);
   }
 
   .google-play {
