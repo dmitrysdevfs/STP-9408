@@ -1,10 +1,14 @@
+.faq {
+  margin: var(--section-margin);
+}
+
 .faq-title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h4-mobile);
+  font-size: var(--font-size-h2-mobile);
   color: var(--color-text-light);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .faq-item-title {
@@ -94,7 +98,7 @@
 @media (min-width: 1200px) {
   .faq-title {
     font-weight: var(--font-weight-semi-bold);
-    font-size: var(--font-size-h2-desktop);
+    font-size: var(--font-size-h3-desktop);
     margin-bottom: 15px;
   }
   .faq-list {
