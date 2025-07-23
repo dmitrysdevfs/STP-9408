@@ -1,94 +1,87 @@
-class CookiesPopup {
-  constructor() {
-    this.popup = null;
-    this.storageKey = 'cookiesConsent';
-    this.init();
+// Cookies Popup
+document.addEventListener('DOMContentLoaded', function () {
+  const storageKey = 'cookiesConsent';
+
+  // Перевіряємо, чи користувач вже дав згоду
+  if (localStorage.getItem(storageKey) !== null) {
+    return;
   }
 
-  init() {
-    if (this.hasUserConsent()) {
+  // Створюємо popup
+  const popupHTML = `
+    <div class="cookies-popup" id="cookiesPopup">
+      <div class="cookies-popup__content">
+        <h2 class="cookies-popup__title">Cookies Policy</h2>
+        <p class="cookies-popup__text">
+          We use cookies to improve your experience on our website.<br class="desktop-only">
+          By browsing this website, you agree to our use of cookies.
+        </p>
+        <div class="cookies-popup__buttons">
+          <button class="cookies-popup__button cookies-popup__button--accept" id="acceptCookies">
+            Accept Cookies
+          </button>
+          <button class="cookies-popup__button cookies-popup__button--decline" id="declineCookies">
+            Decline Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+  // Чекаємо трохи, щоб DOM оновився
+  setTimeout(() => {
+    const popup = document.getElementById('cookiesPopup');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    // Перевіряємо, чи елементи існують
+    if (!popup || !acceptBtn || !declineBtn) {
+      console.error('Cookies popup elements not found');
       return;
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.createPopup());
-    } else {
-      this.createPopup();
-    }
-  }
+    // Показуємо popup
+    popup.classList.add('active');
 
-  hasUserConsent() {
-    return localStorage.getItem(this.storageKey) !== null;
-  }
+    // Обробники подій
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem(storageKey, 'accepted');
+      hidePopup();
+      console.log('Cookies accepted');
+    });
 
-  createPopup() {
-    fetch('./partials/cookies-popup.html')
-      .then(response => response.text())
-      .then(popupHTML => {
-        document.body.insertAdjacentHTML('beforeend', popupHTML);
-        this.popup = document.getElementById('cookiesPopup');
-        this.addEventListeners();
-        this.showPopup();
-      })
-      .catch(error => {
-        console.error('Error loading cookies popup:', error);
+    declineBtn.addEventListener('click', function () {
+      localStorage.setItem(storageKey, 'declined');
+      hidePopup();
+      console.log('Cookies declined');
+    });
+
+    // Закриття по кліку на overlay
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) {
+        localStorage.setItem(storageKey, 'declined');
+        hidePopup();
+        console.log('Cookies declined');
+      }
+    });
+
+    // Запобігання закриття при кліку на контент
+    const content = popup.querySelector('.cookies-popup__content');
+    if (content) {
+      content.addEventListener('click', function (e) {
+        e.stopPropagation();
       });
-  }
+    }
 
-  addEventListeners() {
-    const acceptBtn = document.getElementById('acceptCookies');
-    acceptBtn.addEventListener('click', () => this.handleAccept());
-
-    const declineBtn = document.getElementById('declineCookies');
-    declineBtn.addEventListener('click', () => this.handleDecline());
-
-    this.popup.addEventListener('click', e => {
-      if (e.target === this.popup) {
-        this.handleDecline();
-      }
-    });
-
-    const content = this.popup.querySelector('.cookies-popup__content');
-    content.addEventListener('click', e => {
-      e.stopPropagation();
-    });
-  }
-
-  showPopup() {
-    setTimeout(() => {
-      this.popup.classList.add('active');
-    }, 100);
-  }
-
-  hidePopup() {
-    this.popup.classList.remove('active');
-    setTimeout(() => {
-      if (this.popup && this.popup.parentNode) {
-        this.popup.parentNode.removeChild(this.popup);
-      }
-    }, 300);
-  }
-
-  handleAccept() {
-    localStorage.setItem(this.storageKey, 'accepted');
-    this.hidePopup();
-    this.onCookiesAccepted();
-  }
-
-  handleDecline() {
-    localStorage.setItem(this.storageKey, 'declined');
-    this.hidePopup();
-    this.onCookiesDeclined();
-  }
-
-  onCookiesAccepted() {
-    console.log('Cookies accepted');
-  }
-
-  onCookiesDeclined() {
-    console.log('Cookies declined');
-  }
-}
-
-const cookiesPopup = new CookiesPopup();
-export default cookiesPopup;
+    function hidePopup() {
+      popup.classList.remove('active');
+      setTimeout(() => {
+        if (popup && popup.parentNode) {
+          popup.parentNode.removeChild(popup);
+        }
+      }, 300);
+    }
+  }, 50);
+});
