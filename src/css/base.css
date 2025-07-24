@@ -38,7 +38,13 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
-
+@media (min-width: 1200px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
 /* Підтримка дуже широких екранів (1440px+) */
 @media (min-width: 1440px) {
   body {

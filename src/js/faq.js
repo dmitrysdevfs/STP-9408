@@ -3,9 +3,9 @@ import 'accordion-js/dist/accordion.min.css';
 
 // Оновлює висоту відкритих FAQ елементів при зміні розміру вікна
 function updateOpenElementsHeight() {
-  const openElements = document.querySelectorAll('.js-faq-el.is-open');
+  const openElements = document.querySelectorAll('[data-faq-el].is-open');
   openElements.forEach(element => {
-    const content = element.querySelector('.js-faq-content');
+    const content = element.querySelector('[data-faq-content]');
     if (content) {
       // Тимчасово знімаємо max-height для отримання реальної висоти
       const currentMaxHeight = content.style.maxHeight;
@@ -20,11 +20,11 @@ function updateOpenElementsHeight() {
 }
 
 // Ініціалізація accordion
-const accordion = new Accordion('.js-faq-list', {
+const accordion = new Accordion('[data-faq-list]', {
   duration: 500,
   showMultiple: true, // Дозволяємо кілька відкритих елементів
-  elementClass: 'js-faq-el',
-  triggerClass: 'js-faq-cont',
+  elementClass: 'js-faq-item',
+  triggerClass: 'js-faq-question',
   panelClass: 'js-faq-content',
   activeClass: 'is-open',
   onOpen: function (currentElement) {
