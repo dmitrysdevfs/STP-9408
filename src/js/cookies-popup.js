@@ -33,7 +33,7 @@ class CookiesPopup {
       document.body.insertAdjacentHTML('beforeend', popupHTML);
 
       setTimeout(() => {
-        this.popup = document.getElementById('cookiesPopup');
+        this.popup = document.querySelector('[data-cookies-popup]');
         if (!this.popup) {
           console.error('Cookies popup element not found');
           return;
@@ -51,18 +51,18 @@ class CookiesPopup {
 
   createFallbackPopup() {
     const popupHTML = `
-      <div class="cookies-popup" id="cookiesPopup">
-        <div class="cookies-popup__content">
+      <div class="cookies-popup" id="cookiesPopup" data-cookies-popup>
+        <div class="cookies-popup__content" data-cookies-content>
           <h2 class="cookies-popup__title">Cookies Policy</h2>
           <p class="cookies-popup__text">
             We use cookies to improve your experience on our website.<br class="desktop-only">
             By browsing this website, you agree to our use of cookies.
           </p>
           <div class="cookies-popup__buttons">
-            <button class="cookies-popup__button cookies-popup__button--accept" id="acceptCookies">
+            <button class="cookies-popup__button cookies-popup__button--accept" id="acceptCookies" data-cookies-accept>
               Accept Cookies
             </button>
-            <button class="cookies-popup__button cookies-popup__button--decline" id="declineCookies">
+            <button class="cookies-popup__button cookies-popup__button--decline" id="declineCookies" data-cookies-decline>
               Decline Cookies
             </button>
           </div>
@@ -73,7 +73,7 @@ class CookiesPopup {
     document.body.insertAdjacentHTML('beforeend', popupHTML);
 
     setTimeout(() => {
-      this.popup = document.getElementById('cookiesPopup');
+      this.popup = document.querySelector('[data-cookies-popup]');
       if (this.popup) {
         this.addEventListeners();
         this.showPopup();
@@ -82,8 +82,8 @@ class CookiesPopup {
   }
 
   addEventListeners() {
-    const acceptBtn = document.getElementById('acceptCookies');
-    const declineBtn = document.getElementById('declineCookies');
+    const acceptBtn = document.querySelector('[data-cookies-accept]');
+    const declineBtn = document.querySelector('[data-cookies-decline]');
 
     if (acceptBtn) {
       acceptBtn.addEventListener('click', () => this.handleAccept());
@@ -100,7 +100,7 @@ class CookiesPopup {
         }
       });
 
-      const content = this.popup.querySelector('.cookies-popup__content');
+      const content = this.popup.querySelector('[data-cookies-content]');
       if (content) {
         content.addEventListener('click', e => {
           e.stopPropagation();

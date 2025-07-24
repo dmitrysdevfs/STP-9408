@@ -40,6 +40,14 @@
   gap: 27px;
   margin-bottom: 20px;
 }
+.contact-link {
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
 .icon-networks {
   width: 44px;
   height: 44px;
@@ -58,7 +66,7 @@
   }
   .social-media {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 8px;
     margin-top: 20px;
   }

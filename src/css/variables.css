@@ -48,7 +48,7 @@
   --desktop-large: 1440px;
 
   /* Container max-widths */
-  --container-mobile: 256px; /* 320px - 32px - 32px для точного розміру */
+  --container-mobile: 320px; /* 320px - 32px - 32px для точного розміру */
   --container-desktop: 1200px;
   --container-large: 1440px;
 

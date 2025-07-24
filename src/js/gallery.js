@@ -3,21 +3,21 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 Swiper.use([Navigation, Pagination]);
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('[data-swiper]', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 16,
   loop: false,
   navigation: {
-    nextEl: '.gallery-button-next',
-    prevEl: '.gallery-button-prev',
+    nextEl: '[data-button-next]',
+    prevEl: '[data-button-prev]',
   },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '[data-swiper-pagination]',
     clickable: true,
   },
   mousewheel: {
