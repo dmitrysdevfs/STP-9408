@@ -7,10 +7,7 @@
   padding: 0;
 }
 
-/* Hide footer on mobile */
-.footer {
-  display: none;
-}
+/* Footer visibility - handled in footer.css */
 
 .policy-content .container {
   padding: 20px 32px 40px;
@@ -152,11 +149,6 @@
 
   .policy-content .back-link {
     font-size: 18px;
-  }
-
-  /* Show footer on desktop */
-  .footer {
-    display: block;
   }
 }
 
